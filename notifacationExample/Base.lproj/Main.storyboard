@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="notifacationExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Posta adresi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQn-oq-slQ">
+                                <rect key="frame" x="48" y="132" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="INZ-Fe-OQ9">
+                                <rect key="frame" x="48" y="206" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre Tekrar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvz-uq-cWN">
+                                <rect key="frame" x="48" y="280" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-Hd-m1L">
+                                <rect key="frame" x="48" y="354" width="274" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9X-74-21N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Yap" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGt-GN-MIx">
+                                <rect key="frame" x="163" y="79" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aQn-oq-slQ" firstAttribute="trailing" secondItem="INZ-Fe-OQ9" secondAttribute="trailing" id="3sd-tX-Mo6"/>
+                            <constraint firstItem="GYt-Hd-m1L" firstAttribute="top" secondItem="qvz-uq-cWN" secondAttribute="bottom" constant="40" id="8c8-UI-YPI"/>
+                            <constraint firstItem="qvz-uq-cWN" firstAttribute="leading" secondItem="GYt-Hd-m1L" secondAttribute="leading" id="HyN-6a-gUJ"/>
+                            <constraint firstItem="INZ-Fe-OQ9" firstAttribute="top" secondItem="aQn-oq-slQ" secondAttribute="bottom" constant="40" id="Kg8-1G-1Jb"/>
+                            <constraint firstItem="aQn-oq-slQ" firstAttribute="leading" secondItem="INZ-Fe-OQ9" secondAttribute="leading" id="NHF-dL-Hgw"/>
+                            <constraint firstItem="aQn-oq-slQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="WGi-zf-5Ke"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aQn-oq-slQ" secondAttribute="trailing" constant="71" id="bjC-cM-hl6"/>
+                            <constraint firstItem="qvz-uq-cWN" firstAttribute="top" secondItem="INZ-Fe-OQ9" secondAttribute="bottom" constant="40" id="dBs-TJ-cWX"/>
+                            <constraint firstItem="INZ-Fe-OQ9" firstAttribute="trailing" secondItem="qvz-uq-cWN" secondAttribute="trailing" id="e7R-1U-lLJ"/>
+                            <constraint firstItem="NGt-GN-MIx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="egD-Ir-B6C"/>
+                            <constraint firstItem="qvz-uq-cWN" firstAttribute="trailing" secondItem="GYt-Hd-m1L" secondAttribute="trailing" id="lAs-U5-vXs"/>
+                            <constraint firstItem="INZ-Fe-OQ9" firstAttribute="leading" secondItem="qvz-uq-cWN" secondAttribute="leading" id="lQZ-1y-YZ8"/>
+                            <constraint firstItem="aQn-oq-slQ" firstAttribute="top" secondItem="NGt-GN-MIx" secondAttribute="bottom" constant="32" id="pCC-z4-Ud0"/>
+                            <constraint firstItem="NGt-GN-MIx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sUT-Wk-P6E"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eMail" destination="aQn-oq-slQ" id="EZ6-Xz-yau"/>
+                        <outlet property="password" destination="INZ-Fe-OQ9" id="sYi-r9-vLb"/>
+                        <outlet property="rePassword" destination="qvz-uq-cWN" id="KjR-jY-Rvn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
